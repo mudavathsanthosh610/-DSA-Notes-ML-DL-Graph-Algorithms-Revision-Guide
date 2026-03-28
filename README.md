@@ -1,3 +1,408 @@
+<div align="center">
+
+# 📚 DSA · ML · DL · Graph Algorithms . Time Complexity Patterns . Self Testing Cheatsheet . RAG Design Pattern . DS NOTES . DSA Quick Revision Guide . DSA SHEET . DSA Using Python . programming final . striver sde sheet solution . Several-Coding-Patterns-for-Solving-Data-Structures-and-Algorithms-Problems-during-Interviews-main. DP and GRAPH TRAVERSAL
+### Complete Revision Guide — Java
+
+*Comprehensive short notes with syntax, patterns, code templates & time complexity*
+
+[![Language](https://img.shields.io/badge/Language-Java-orange?style=flat-square&logo=java)](https://www.java.com)
+[![Topics](https://img.shields.io/badge/DSA%20Topics-20-blue?style=flat-square)](/)
+[![ML/DL](https://img.shields.io/badge/ML%20%2F%20DL-Included-green?style=flat-square)](/)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](/)
+
+</div>
+
+---
+
+## 📁 Repository Files
+
+| File | Description |
+|------|-------------|
+| `DS_NOTES__16_08_24.pdf` | Full DSA short notes — 20 topics with definitions, code patterns & time complexity |
+| `DSA_Quick_Revision_Guide.pdf` | Condensed quick revision guide for last-minute exam or interview prep |
+
+---
+
+## 🗂️ Table of Contents
+
+- [📌 DSA Topics](#-dsa-topics-covered)
+- [🔑 Key DSA Patterns](#-key-dsa-patterns)
+- [🕸️ Graph Patterns & Algorithms](#️-graph-patterns--algorithms)
+- [🤖 Machine Learning](#-machine-learning)
+- [🧠 Deep Learning](#-deep-learning)
+- [🚀 How to Use](#-how-to-use)
+- [🛠️ Language & Tools](#️-language--tools)
+- [📖 Credits](#-credits)
+
+---
+
+## 📌 DSA Topics Covered
+
+| # | Topic | # | Topic |
+|---|-------|---|-------|
+| 01 | Array | 11 | Trie |
+| 02 | String | 12 | Heap / Priority Queue |
+| 03 | Hashing | 13 | Intervals |
+| 04 | Sliding Window | 14 | Greedy Algorithms |
+| 05 | Two Pointer | 15 | Recursion |
+| 06 | Stack | 16 | Backtracking |
+| 07 | Queue | 17 | Graphs |
+| 08 | Linked List | 18 | Dynamic Programming (1D) |
+| 09 | Binary Search | 19 | Dynamic Programming (2D) |
+| 10 | Tree | 20 | Bit Manipulation |
+
+### 🧠 What's Inside Each Topic
+
+| ✅ Section | Description |
+|-----------|-------------|
+| Definition | Clear explanation of the concept |
+| Key Operations & Syntax | Java code with time complexity table |
+| Patterns to Remember | Sliding Window, Two Pointer, Hashing, etc. |
+| Code Templates | Ready-to-use Java implementations |
+| Time Complexity Recap | Best case and worst case summary |
+
+---
+
+## 🔑 Key DSA Patterns
+
+| Pattern | Use Case |
+|---------|----------|
+| 🪟 Sliding Window | Fixed & variable size subarray/substring problems |
+| 👉👈 Two Pointer | Opposite & same direction — pairs, duplicates, palindromes |
+| 🗂️ Hashing | Frequency count, Two Sum, Anagram detection |
+| 📐 Kadane's Algorithm | Maximum subarray sum |
+| 🌲 Tree Traversals | Inorder, Preorder, Postorder, Level Order |
+| 🧮 DP Patterns | 0/1 Knapsack, LCS, LIS, Coin Change, Grid paths |
+| 🔁 Backtracking | N-Queens, Subsets, Permutations |
+
+---
+
+## 🕸️ Graph Patterns & Algorithms
+
+### Graph Representations
+
+| Representation | Space Complexity | Best Used For |
+|----------------|:---------------:|---------------|
+| Adjacency Matrix | O(V²) | Dense graphs, O(1) edge lookup |
+| Adjacency List | O(V + E) | Sparse graphs, neighbor traversal |
+| Incidence Matrix | O(V × E) | Edge-centric algorithms (max flow) |
+
+---
+
+### Graph Traversal Patterns
+
+| Pattern | Algorithm | Time Complexity | Use Case |
+|---------|-----------|:--------------:|----------|
+| Depth First | DFS (Recursive / Stack) | O(V + E) | Cycle detection, topological sort, path finding |
+| Breadth First | BFS (Queue) | O(V + E) | Shortest path (unweighted), level order, connected components |
+| Bidirectional | Bidirectional BFS | O(b^(d/2)) | Faster shortest path between two nodes |
+
+---
+
+### Shortest Path Algorithms
+
+| Algorithm | Time Complexity | Space | Works With | Notes |
+|-----------|:--------------:|:-----:|------------|-------|
+| Dijkstra | O((V + E) log V) | O(V) | Non-negative weights | Uses Min-Heap / Priority Queue |
+| Bellman-Ford | O(V × E) | O(V) | Negative weights | Detects negative cycles |
+| Floyd-Warshall | O(V³) | O(V²) | All pairs | DP-based, all-pairs shortest path |
+| Johnson's | O(V² log V + VE) | O(V²) | Sparse graphs | Combines Bellman-Ford + Dijkstra |
+| BFS | O(V + E) | O(V) | Unweighted graphs | Simplest shortest path |
+
+---
+
+### Minimum Spanning Tree (MST)
+
+| Algorithm | Time Complexity | Approach | Use Case |
+|-----------|:--------------:|----------|----------|
+| Kruskal's | O(E log E) | Greedy + Union-Find | Sparse graphs |
+| Prim's | O(E + V log V) | Greedy + Priority Queue | Dense graphs |
+
+---
+
+### Advanced Graph Algorithms
+
+| Algorithm | Time Complexity | Use Case |
+|-----------|:--------------:|----------|
+| Topological Sort (DFS) | O(V + E) | Task scheduling, dependency resolution |
+| Kahn's Algorithm (BFS) | O(V + E) | Topological sort using in-degree |
+| Kosaraju's (SCC) | O(V + E) | Strongly Connected Components |
+| Tarjan's (SCC) | O(V + E) | Strongly Connected Components (single DFS) |
+| Ford-Fulkerson | O(max flow × E) | Maximum network flow |
+| Edmonds-Karp | O(VE²) | Max flow using BFS augmenting paths |
+| Hopcroft-Karp | O(√V × E) | Bipartite graph matching |
+| Fleury's Algorithm | O(E²) | Eulerian path / circuit |
+
+---
+
+### ✅ Key Graph Patterns Cheatsheet
+
+```
+Cycle Detection       → DFS + visited[] + recStack[]  (directed)
+                        Union-Find                     (undirected)
+
+Bipartite Check       → BFS / DFS with 2-coloring
+
+Connected Components  → DFS / BFS / Union-Find
+
+Articulation Points   → DFS + discovery & low values
+
+Bridges               → DFS + discovery & low values
+
+Topological Order     → DFS postorder reverse / Kahn's BFS
+
+Negative Cycle        → Bellman-Ford (V-th relaxation check)
+
+Shortest Path Tree    → Dijkstra + parent[] array
+
+Island Problems       → DFS / BFS on 2D grid
+
+Flood Fill            → BFS / DFS from source cell
+
+Union-Find (DSU)      → Path compression + union by rank
+```
+
+---
+
+## 🤖 Machine Learning
+
+### ML Workflow
+
+```
+Data Collection ──► Preprocessing ──► Feature Engineering
+       ──► Model Selection ──► Training ──► Evaluation
+              ──► Hyperparameter Tuning ──► Deployment
+```
+
+---
+
+### Types of Machine Learning
+
+| Type | Description | Examples |
+|------|-------------|---------|
+| Supervised | Learn from labeled data | Classification, Regression |
+| Unsupervised | Find patterns in unlabeled data | Clustering, Dimensionality Reduction |
+| Semi-Supervised | Mix of labeled + unlabeled data | Self-training models |
+| Reinforcement | Learn via reward / penalty | Game AI, Robotics |
+
+---
+
+### Core ML Algorithms
+
+| Algorithm | Type | Time Complexity | Use Case |
+|-----------|------|:--------------:|----------|
+| Linear Regression | Supervised | O(n × d) | Predicting continuous values |
+| Logistic Regression | Supervised | O(n × d × iter) | Binary classification |
+| Decision Tree | Supervised | O(n log n × d) | Classification & Regression |
+| Random Forest | Supervised | O(T × n log n) | Ensemble, reduces overfitting |
+| SVM | Supervised | O(n² ~ n³) | High-dimensional classification |
+| KNN | Supervised | O(n × d) per query | Classification, simple baseline |
+| Naive Bayes | Supervised | O(n × d) | Text classification, spam filter |
+| K-Means | Unsupervised | O(n × k × iter) | Clustering |
+| DBSCAN | Unsupervised | O(n log n) | Density-based clustering |
+| PCA | Unsupervised | O(n × d²) | Dimensionality reduction |
+| Gradient Boosting (XGBoost) | Supervised | O(T × n log n) | Structured / tabular data |
+| AdaBoost | Supervised | O(T × n) | Boosting weak learners |
+
+---
+
+### Key ML Concepts
+
+| Concept | Description |
+|---------|-------------|
+| Overfitting | Model too complex — memorizes training data |
+| Underfitting | Model too simple — fails to capture patterns |
+| Bias | Error from wrong assumptions in the model |
+| Variance | Error from sensitivity to training data fluctuations |
+| Regularization | L1 (Lasso), L2 (Ridge) — penalizes large weights |
+| Cross-Validation | K-Fold CV to evaluate model generalization |
+| Feature Scaling | Normalization (0–1) / Standardization (mean=0, std=1) |
+| Confusion Matrix | TP, TN, FP, FN — classification evaluation grid |
+| Precision | TP / (TP + FP) |
+| Recall | TP / (TP + FN) |
+| F1 Score | 2 × (Precision × Recall) / (Precision + Recall) |
+| ROC-AUC | Model's ability to distinguish between classes |
+
+---
+
+### Loss Functions
+
+| Loss Function | Use Case |
+|--------------|----------|
+| Mean Squared Error (MSE) | Regression |
+| Mean Absolute Error (MAE) | Regression — robust to outliers |
+| Binary Cross-Entropy | Binary Classification |
+| Categorical Cross-Entropy | Multi-class Classification |
+| Hinge Loss | SVM |
+| Huber Loss | Regression — combines MSE + MAE |
+
+---
+
+### Optimization Algorithms
+
+| Optimizer | Description |
+|-----------|-------------|
+| Gradient Descent (GD) | Update weights using the full dataset |
+| Stochastic GD (SGD) | Update weights per single sample |
+| Mini-Batch GD | Update using small batches |
+| Momentum | Accelerates SGD in the relevant direction |
+| RMSProp | Adapts learning rate per parameter |
+| Adam | Combines Momentum + RMSProp — most popular |
+
+---
+
+## 🧠 Deep Learning
+
+### Neural Network Flow
+
+```
+Input Layer ──► Hidden Layers (Activation) ──► Output Layer
+                        │
+          Forward Pass ──► Loss Calculation
+                        │
+          Backpropagation ──► Weight Update (Optimizer)
+```
+
+---
+
+### Activation Functions
+
+| Function | Formula | Use Case |
+|----------|---------|----------|
+| Sigmoid | 1 / (1 + e^−x) | Binary output (0–1) |
+| Tanh | (e^x − e^−x) / (e^x + e^−x) | Centered output (−1 to 1) |
+| ReLU | max(0, x) | Hidden layers — most common |
+| Leaky ReLU | max(0.01x, x) | Fixes dying ReLU problem |
+| Softmax | e^x / Σe^x | Multi-class output probabilities |
+| GELU | x × Φ(x) | Transformers, BERT, GPT |
+| Swish | x × Sigmoid(x) | Google's deep neural networks |
+
+---
+
+### Deep Learning Architectures
+
+| Architecture | Full Name | Best For |
+|-------------|-----------|----------|
+| ANN | Artificial Neural Network | Tabular data, general tasks |
+| CNN | Convolutional Neural Network | Image recognition, Computer Vision |
+| RNN | Recurrent Neural Network | Sequential data, time series |
+| LSTM | Long Short-Term Memory | Long sequences, NLP, speech |
+| GRU | Gated Recurrent Unit | Faster alternative to LSTM |
+| Transformer | Attention-based Architecture | NLP, translation, GPT, BERT |
+| GAN | Generative Adversarial Network | Image generation, deepfakes |
+| VAE | Variational Autoencoder | Generative modelling, compression |
+| Autoencoder | Encoder-Decoder | Anomaly detection, denoising |
+| ResNet | Residual Network | Deep image classification (skip connections) |
+| BERT | Bidirectional Encoder Representations | NLP understanding tasks |
+| GPT | Generative Pre-trained Transformer | Text generation, chat AI |
+
+---
+
+### CNN Key Concepts
+
+| Concept | Description |
+|---------|-------------|
+| Convolution | Filter slides over input to extract features |
+| Kernel / Filter | Small matrix for feature extraction |
+| Stride | Number of steps the filter moves |
+| Padding | Zeros added to borders — Same / Valid |
+| Pooling | Max Pool / Avg Pool — reduces spatial dimensions |
+| Flatten | Converts 2D feature maps to 1D vector |
+| Dropout | Randomly zeroes neurons to prevent overfitting |
+| Batch Normalization | Normalizes layer inputs for stable training |
+
+---
+
+### Regularization Techniques
+
+| Technique | Description |
+|-----------|-------------|
+| Dropout | Randomly deactivate neurons during training |
+| L1 / L2 | Weight penalty — Lasso / Ridge |
+| Batch Normalization | Normalizes activations per mini-batch |
+| Early Stopping | Stop when validation loss stops improving |
+| Data Augmentation | Artificially increase training data variety |
+
+---
+
+### Key DL Hyperparameters
+
+| Hyperparameter | Description |
+|---------------|-------------|
+| Learning Rate | Step size for weight updates — most critical |
+| Batch Size | Number of samples per gradient update |
+| Epochs | Full passes over the training dataset |
+| Dropout Rate | Fraction of neurons randomly dropped |
+| Number of Layers | Depth of the network |
+| Hidden Units | Neurons per hidden layer |
+| Weight Initialization | Xavier (Sigmoid/Tanh) · He (ReLU) |
+
+---
+
+### Transfer Learning Flow
+
+```
+Pre-trained Model  (ResNet / BERT / VGG / EfficientNet)
+          │
+          ▼
+  Freeze base layers  (preserve learned features)
+          │
+          ▼
+  Add custom output layers
+          │
+          ▼
+  Fine-tune on your specific dataset
+```
+
+---
+
+### Deep Learning Use Cases
+
+| Domain | Recommended Architecture |
+|--------|--------------------------|
+| Image Classification | CNN, ResNet, EfficientNet |
+| Object Detection | YOLO, SSD, Faster R-CNN |
+| NLP / Text | BERT, GPT, Transformer |
+| Time Series Forecasting | LSTM, GRU, Transformer |
+| Image Generation | GAN, VAE, Diffusion Models |
+| Speech Recognition | RNN, LSTM, Wav2Vec |
+| Recommendation Systems | ANN, Collaborative Filtering |
+| Anomaly Detection | Autoencoder, Isolation Forest |
+
+---
+
+## 🚀 How to Use
+
+| Goal | Resource |
+|------|----------|
+| 📝 DSA Interview Prep | `DSA_Quick_Revision_Guide.pdf` — fast overview |
+| 📖 Deep DSA Study | `DS_NOTES__16_08_24.pdf` — topic by topic |
+| 🕸️ Graph Problems | Graph Patterns & Algorithms section above |
+| 🤖 ML Interviews | ML algorithms table + key concepts |
+| 🧠 DL Interviews | Architectures, activation functions, hyperparameters |
+| ⏱️ Last-Minute Revision | Time Complexity tables in each section |
+
+---
+
+## 🛠️ Language & Tools
+
+| Area | Language / Tools |
+|------|-----------------|
+| DSA | Java |
+| Machine Learning | Python · Scikit-learn · NumPy · Pandas |
+| Deep Learning | Python · PyTorch · TensorFlow · Keras |
+
+---
+
+## 📖 Credits
+
+> Notes created by **Nishchal** — [CodeWithNishchal](https://www.instagram.com/codewithnishchal/)
+
+<div align="center">
+
+*"Never look for the solution, always think for the solution!"*
+**— Nishchal**
+
 # Several Coding Patterns for Solving Data Structures and Algorithms Problems during Interviews
 
 These are my notes in <b>Javascript</b> from a [course](https://www.educative.io/courses/grokking-the-coding-interview) that categorizes coding interview problems into a set of <b>16 patterns</b>. 
